@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~bootstrap/scss/bootstrap.scss";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+
+.body {
+  background-color: $gray-300;
+}
+
+.content-container {
+  min-height: 100vh;
+}
