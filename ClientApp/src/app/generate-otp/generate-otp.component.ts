@@ -49,8 +49,8 @@ export class GenerateOTPComponent implements OnDestroy {
   }
 
   private computeOTP(userKey: number, timeKey: Date): string {
-    return ('0' + ((timeKey.getHours() + userKey) % 100)).slice(-2) +
-      ('0' + ((timeKey.getMinutes() + userKey) % 100)).slice(-2) +
+    return ('0' + ((timeKey.getFullYear() + userKey) % 100)).slice(-2) +
+      ('0' + ((timeKey.getDate() + userKey) % 100)).slice(-2) +
       ('0' + ((Math.floor(timeKey.getSeconds() / 30) + userKey) % 100)).slice(-2);
   }
 

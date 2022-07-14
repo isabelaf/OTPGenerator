@@ -10,7 +10,7 @@ namespace OTPGenerator.BLL
             var userKey = userId.Sum(c => c);
             var timeKey = DateTime.Now;
 
-            return $"{(timeKey.Hour + userKey) % 100:00}{(timeKey.Minute + userKey) % 100:00}{(timeKey.Second / 30 + userKey) % 100:00}";
+            return $"{(timeKey.Year + userKey) % 100:00}{(timeKey.Day + userKey) % 100:00}{(timeKey.Second / 30 + userKey) % 100:00}";
         }
     }
 }
